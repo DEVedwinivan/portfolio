@@ -25,17 +25,22 @@ export default function Contact() {
                     ¿Tienes alguna pregunta o proyecto en mente? ¡Contáctame!
                 </motion.p>
                 <motion.form
+                    action="https://formspree.io/f/xjgvbpzk"
+                    method="POST"
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"
                     transition={{ delay: 0.2 }}
                     className="grid gap-6"
                 >
+                    <input type="hidden" className="hidden" name="_subject" value="Mensaje enviado desde el portafolio" />
                     <div className="grid gap-4">
                         <label htmlFor="name" className="text-gray-700 font-medium">Nombre</label>
                         <input
                             type="text"
                             id="name"
+                            name="name"
+                            required
                             className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
@@ -44,6 +49,8 @@ export default function Contact() {
                         <input
                             type="email"
                             id="email"
+                            name="email"
+                            required
                             className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
@@ -51,10 +58,13 @@ export default function Contact() {
                         <label htmlFor="message" className="text-gray-700 font-medium">Mensaje</label>
                         <textarea
                             id="message"
+                            name="message"
+                            required
                             rows={5}
                             className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         ></textarea>
                     </div>
+
                     <button
                         type="submit"
                         className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
