@@ -108,7 +108,6 @@ function handleSubmit(e) {
 </form>
 ```
 
-Si quieres, puedo generar el código exacto e inyectarlo en `components/sections/Contact.jsx`.
 
 ## Lint, tests y calidad
 
@@ -128,5 +127,3 @@ Next.js suele funcionar con la configuración por defecto de Vercel.
 - Vercel: https://vercel.com/docs
 
 ---
-
-¿Quieres que inserte ahora un formulario completo en `components/sections/Contact.jsx`, o que actualice el `README.md` principal con esta guía en español?
