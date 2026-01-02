@@ -13,7 +13,7 @@ export const metadata = {
         siteName: 'Portafolio Edwin Rodríguez',
         images: [
             {
-                url: '/og-image.png',
+                url: 'public/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'Portafolio de Edwin Rodríguez',
