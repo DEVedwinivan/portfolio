@@ -19,9 +19,9 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Página Web de regalos",
-        description: "Desarrollé una página web de regalos utilizando PHP, bootstrap y JS, ofreciendo una experiencia de usuario atractiva y funcional.",
-        longdescription: "Desarrollé una página web de regalos utilizando PHP, bootstrap y JS, ofreciendo una experiencia de usuario atractiva y funcional. El sitio permite a los usuarios navegar por una variedad de productos de regalo, agregar artículos a su carrito de compras y completar el proceso de pago de manera segura. Implementé un diseño responsivo utilizando Bootstrap para asegurar que la página se vea bien en dispositivos móviles y de escritorio. Además, utilicé JavaScript para mejorar la interactividad del sitio, incluyendo características como filtros de productos y una experiencia de usuario fluida.",
+        title: "Sistema de apartados para tienda física",
+        description: "Desarrollé un sistema de apartados para una tienda física de regalos utilizando PHP y MySQL, facilitando la gestión de reservas de productos por parte de los clientes.",
+        longdescription: "Este proyecto consistió en el desarrollo de un sistema de apartados para una tienda física especializada en regalos. El sistema permite a los clientes realizar apartados de productos, gestionar sus reservas y recibir notificaciones sobre el estado del pedido. Utilicé PHP para el backend y MySQL para la base de datos, asegurando una gestión eficiente del inventario y las reservas. Implementé un diseño responsivo con Bootstrap para ofrecer una experiencia intuitiva tanto en dispositivos móviles como en escritorio.",
         tech: ["PHP", "Bootstrap", "JavaScript"],
         role: "Desarrollador Full Stack",
         demo:null,

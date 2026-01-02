@@ -3,6 +3,7 @@ import ProjectItem from '@/components/ui/ProjectItem';
 
 export const metadata = {
     title: 'Proyectos - Edwin Rodríguez',
+    description: 'Explora los proyectos desarrollados por Edwin Rodríguez, destacando sus habilidades en desarrollo web, backend y seguridad.',
 };
 
 export default function ProjectsPage() {

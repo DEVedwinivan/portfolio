@@ -1,5 +1,29 @@
 import Link from 'next/link';
 
+export const metadata = {
+    title:{
+        default: 'Edwin Rodríguez - Desarrollador Web y BackEnd',
+        template: '%s - Edwin Rodríguez',
+    },
+    description: 'Portafolio de Edwin Rodríguez, desarrollador web y backend especializado en LARAVEL, PHP y aplicaciones modernas',
+    openGraph: {
+        title: 'Edwin Rodríguez - Desarrollador Web y BackEnd',
+        description: 'Portafolio profesional de Edwin Rodríguez, mostrando proyectos y habilidades en desarrollo web y backend.',
+        url: 'https://portfolio-ten-henna-pvkh2ge8el.vercel.app/',
+        siteName: 'Portafolio Edwin Rodríguez',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Portafolio de Edwin Rodríguez',
+            },
+        ],
+        locale: 'es_MX',
+        type: 'website',
+    },
+};
+
 export default function Navbar() {
     return (
         <header className='w-full border-b border-gray-200'>
