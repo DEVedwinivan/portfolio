@@ -40,12 +40,12 @@ export default function Hero() {
                 transition={{ delay: 0.6 }}
                 className="mt-8 flex gap-4"
                 >
-                    {/* <Link href="/projects" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                    <Link href="/projects" className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition" aria-label="Ver Proyectos">
                         Ver Proyectos
                     </Link>
-                    <Link href="/contact" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition">
+                    <Link href="/contact" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition" aria-label="Contactar">
                         Contactar
-                    </Link> */}
+                    </Link>
                 </motion.div>
             </div>
         </section>

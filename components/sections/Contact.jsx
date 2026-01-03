@@ -2,8 +2,34 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import { Github, Linkedin } from "lucide-react";
+import {useForm, ValidationError } from "@formspree/react";
+
 
 export default function Contact() {
+    const [state, handleSubmit] = useForm("xjgvbpzk");
+    if (state.succeeded) {
+        return (<motion.div
+            className="py-16 text-center"
+            variants={fadeUp}
+        >
+            <motion.h2
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                className="text-2xl font-bold mb-4"
+            >
+                ¡Gracias por tu mensaje!
+            </motion.h2>
+            <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                className="text-gray-600"
+            >
+                Te responderé lo antes posible.
+            </motion.p>
+        </motion.div>);
+    }
     return (
         <section className="py-16" id="contact">
             <div className="max-w-3xl mx-auto px-6 text-center">
@@ -25,8 +51,7 @@ export default function Contact() {
                     ¿Tienes alguna pregunta o proyecto en mente? ¡Contáctame!
                 </motion.p>
                 <motion.form
-                    action="https://formspree.io/f/xjgvbpzk"
-                    method="POST"
+                    onSubmit={handleSubmit}
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"
@@ -67,11 +92,14 @@ export default function Contact() {
 
                     <button
                         type="submit"
+                        disabled={state.submitting}
                         className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                        aria-label="Boton mensaje"
                     >
-                        Enviar Mensaje
+                        {state.submitting ? "Enviando..." : "Enviar Mensaje"}
                     </button>
                 </motion.form>
+                <ValidationError prefix="Error" field="message" errors={state.errors} />
                 <motion.div
                     variants={fadeUp}
                     initial="hidden"
@@ -79,11 +107,11 @@ export default function Contact() {
                     transition={{ delay: 0.3 }}
                     className="mt-8 flex gap-4"
                 >
-                    <a href="https://github.com/DEVedwinivan" target="_blank" className="text-gray-600 hover:underline">
+                    <a href="https://github.com/DEVedwinivan" target="_blank" className="text-gray-600 hover:underline" aria-label="Visita mi perfil de GitHub">
                         Visita mi perfil de GitHub
                         <Github className="inline-block ml-1" />
                     </a>
-                    <a href="https://www.linkedin.com/in/edwin-ivan-rodriguez-velazquez-66b2a3296/" className="text-gray-600 hover:underline">
+                    <a href="https://www.linkedin.com/in/edwin-ivan-rodriguez-velazquez-66b2a3296/" className="text-gray-600 hover:underline" aria-label="Visita mi perfil de LinkedIn">
                         Visita mi perfil de LinkedIn 
                         <Linkedin className="inline-block ml-1" />
                     </a>

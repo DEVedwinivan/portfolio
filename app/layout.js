@@ -1,8 +1,8 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
 export const metadata = {
+    viewport : "width=device-width, initial-scale=1",
     title:{
         default: 'Edwin Rodríguez - Desarrollador Web y BackEnd',
         template: '%s - Edwin Rodríguez',
